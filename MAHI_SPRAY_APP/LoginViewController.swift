@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginCard: UIView!
     @IBOutlet weak var logo_card: UIView!
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         let layer = CAGradientLayer()
         layer.frame = self.view.bounds
-        layer.colors = [UIColor.init(red: 0.301, green: 0.973, blue: 1.0, alpha: 1.0).cgColor, UIColor.init(red: 0.25882, green: 0.7137, blue: 0.9568, alpha: 1.0).cgColor]
+        layer.colors = [UIColor.init(red: 0.301, green: 0.973, blue: 1.0, alpha: 0.5).cgColor, UIColor.init(red: 0.25882, green: 0.7137, blue: 0.9568, alpha: 0.5).cgColor]
         view.layer.insertSublayer(layer, at: 0)
         
     }

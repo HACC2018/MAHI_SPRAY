@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4152188FAD800487101 /* AppDelegate.swift */; };
-		55C5E4182188FAD800487101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4172188FAD800487101 /* ViewController.swift */; };
+		55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4172188FAD800487101 /* LoginViewController.swift */; };
 		55C5E41B2188FAD800487101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4192188FAD800487101 /* Main.storyboard */; };
 		55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E41C2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld */; };
 		55C5E4202188FAD900487101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E41F2188FAD900487101 /* Assets.xcassets */; };
 		55C5E4232188FAD900487101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4212188FAD900487101 /* LaunchScreen.storyboard */; };
+		55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E42A21898B5D00487101 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAHI_SPRAY_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C5E4152188FAD800487101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55C5E4172188FAD800487101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55C5E4172188FAD800487101 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		55C5E41A2188FAD800487101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55C5E41D2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MAHI_SPRAY_APP.xcdatamodel; sourceTree = "<group>"; };
 		55C5E41F2188FAD900487101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C5E4222188FAD900487101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C5E4242188FAD900487101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C5E42A21898B5D00487101 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				55C5E4152188FAD800487101 /* AppDelegate.swift */,
-				55C5E4172188FAD800487101 /* ViewController.swift */,
+				55C5E4172188FAD800487101 /* LoginViewController.swift */,
 				55C5E4192188FAD800487101 /* Main.storyboard */,
+				55C5E42A21898B5D00487101 /* SignUpViewController.swift */,
 				55C5E41F2188FAD900487101 /* Assets.xcassets */,
 				55C5E4212188FAD900487101 /* LaunchScreen.storyboard */,
 				55C5E4242188FAD900487101 /* Info.plist */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C5E4182188FAD800487101 /* ViewController.swift in Sources */,
+				55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */,
 				55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */,
+				55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */,
 				55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
