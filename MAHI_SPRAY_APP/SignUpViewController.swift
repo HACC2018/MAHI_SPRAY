@@ -9,22 +9,30 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var sign_up_card: UIView!
+    @IBOutlet weak var logo_card: UIView!
+    @IBOutlet weak var sign_up_button_card: UIView!
+    
+    weak var delegate: MyDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        delegate?.logo_card_design(ViewToAffect: logo_card)
+        delegate?.logo_card_design(ViewToAffect: sign_up_button_card)
+        delegate?.logo_card_design(ViewToAffect: sign_up_card)
+        
+        let layer = CAGradientLayer()
+        layer.frame = self.view.bounds
+        layer.colors = [UIColor.init(red: 0.301, green: 0.973, blue: 1.0, alpha: 0.5).cgColor, UIColor.init(red: 0.25882, green: 0.7137, blue: 0.9568, alpha: 0.5).cgColor]
+        view.layer.insertSublayer(layer, at: 0)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func needToLogInButtonPressed(_ sender: UIButton) {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginController") as? LoginViewController {
+            self.present(vc, animated: false, completion: nil)
+        }
+        
+        
     }
-    */
-
 }

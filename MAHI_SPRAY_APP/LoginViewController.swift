@@ -8,15 +8,24 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+protocol MyDelegate: class {
+    func logo_card_design(ViewToAffect: UIView)
+    
+}
+
+class LoginViewController: UIViewController, MyDelegate {
 
     @IBOutlet weak var loginCard: UIView!
     @IBOutlet weak var logo_card: UIView!
     @IBOutlet weak var login_button_card: UIView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginCard.layer.cornerRadius = 25.0
+        logo_card_design(ViewToAffect: loginCard)
         logo_card_design(ViewToAffect: logo_card)
         logo_card_design(ViewToAffect: login_button_card)
         
@@ -27,6 +36,17 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func go_sign_up_pressed(_ sender: UIButton) {
+        needToCreateAccountButtonPressed()
+    }
+    
+    func needToCreateAccountButtonPressed() {
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signUpController") as? SignUpViewController {
+            vc.delegate = self
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
+    
     func logo_card_design (ViewToAffect: UIView) {
         ViewToAffect.layer.cornerRadius = 25.0
         //ViewToAffect.layer.shadowColor = UIColor.black.cgColor
@@ -34,9 +54,6 @@ class LoginViewController: UIViewController {
         //ViewToAffect.layer.shadowOffset = CGSize.zero
         ViewToAffect.layer.shadowRadius = 10
     }
-    
-    
-
 
 }
 
