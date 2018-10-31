@@ -29,7 +29,7 @@
 		55C5E4222188FAD900487101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C5E4242188FAD900487101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C5E42A21898B5D00487101 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		55C5E42C2189A9D100487101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55C5E42C2189A9D100487101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55F1FED72189B779004C5C52 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAHI_SPRAY_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.release.xcconfig"; sourceTree = "<group>"; };
