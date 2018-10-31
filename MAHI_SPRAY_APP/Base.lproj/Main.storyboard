@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,33 +15,166 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAHI_SPRAY_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp1-kk-X6S">
-                                <rect key="frame" x="22.5" y="84" width="275" height="420"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp1-kk-X6S" userLabel="login_card">
+                                <rect key="frame" x="50" y="133.5" width="275" height="420"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DEP-dH-kBE">
+                                        <rect key="frame" x="25" y="40" width="225" height="355"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01f-OE-hhA">
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="41"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-AC-iqR">
+                                                <rect key="frame" x="0.0" y="41" width="225" height="10"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="gad-Zg-30U"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tim Cook" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="57v-jL-KIY" userLabel="username_textfield">
+                                                <rect key="frame" x="0.0" y="51" width="225" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0ly-Ow-cFv"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="username"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ft-Np-lbJ">
+                                                <rect key="frame" x="0.0" y="101" width="225" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="g1V-bo-ibV"/>
+                                                </constraints>
+                                                <state key="normal" title="Forgot Username?"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-AD-soV">
+                                                <rect key="frame" x="0.0" y="126" width="225" height="25"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="hMZ-Ko-I6j"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="iloveapple" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-d6-7nW" userLabel="password_textfield">
+                                                <rect key="frame" x="0.0" y="151" width="225" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3xd-NZ-1se"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="username"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-Su-emJ" userLabel="Forgot Password?">
+                                                <rect key="frame" x="0.0" y="201" width="225" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="OuE-z6-dFh"/>
+                                                </constraints>
+                                                <state key="normal" title="Forgot Password?"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-Bb-ZIU">
+                                                <rect key="frame" x="0.0" y="226" width="225" height="129"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="Need to Sign Up?">
+                                                    <color key="titleColor" white="0.59416691979316816" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18423256278038025" green="0.17656993865966797" blue="0.16862812638282776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="50O-dl-hYJ">
+                                        <variation key="heightClass=compact" constant="400"/>
                                         <variation key="widthClass=compact" constant="275"/>
+                                        <variation key="heightClass=compact-widthClass=compact" constant="400"/>
                                     </constraint>
-                                    <constraint firstAttribute="height" constant="420" id="7gW-Jm-ClA"/>
+                                    <constraint firstItem="DEP-dH-kBE" firstAttribute="top" secondItem="Zp1-kk-X6S" secondAttribute="top" constant="40" id="6LW-9x-S4a"/>
+                                    <constraint firstAttribute="height" constant="420" id="7gW-Jm-ClA">
+                                        <variation key="heightClass=compact" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="DEP-dH-kBE" secondAttribute="trailing" constant="25" id="dbf-ea-fcl"/>
+                                    <constraint firstItem="DEP-dH-kBE" firstAttribute="leading" secondItem="Zp1-kk-X6S" secondAttribute="leading" constant="25" id="kVg-I9-Q0S"/>
+                                    <constraint firstAttribute="bottom" secondItem="DEP-dH-kBE" secondAttribute="bottom" constant="25" id="try-Pl-qjd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icf-s4-BLk" userLabel="logo_card">
+                                <rect key="frame" x="87.5" y="108.5" width="200" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahi Spray" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woj-Zz-kbm">
+                                        <rect key="frame" x="60" y="15" width="130" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mahi Spray_logo" translatesAutoresizingMaskIntoConstraints="NO" id="q6m-QE-OiY">
+                                        <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Nkq-bR-CSu"/>
+                                            <constraint firstAttribute="height" constant="40" id="SsY-ae-LJc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25097686052322388" green="0.25097855925559998" blue="0.25098296999931335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="woj-Zz-kbm" firstAttribute="leading" secondItem="q6m-QE-OiY" secondAttribute="trailing" constant="10" id="L9R-v1-214"/>
+                                    <constraint firstItem="woj-Zz-kbm" firstAttribute="centerY" secondItem="icf-s4-BLk" secondAttribute="centerY" id="NaY-Wc-btR"/>
+                                    <constraint firstItem="q6m-QE-OiY" firstAttribute="centerY" secondItem="icf-s4-BLk" secondAttribute="centerY" id="XcF-cb-2Ae"/>
+                                    <constraint firstAttribute="trailing" secondItem="woj-Zz-kbm" secondAttribute="trailing" constant="10" id="Z63-yM-6J8"/>
+                                    <constraint firstAttribute="width" constant="200" id="oUu-Xt-k7d"/>
+                                    <constraint firstItem="q6m-QE-OiY" firstAttribute="leading" secondItem="icf-s4-BLk" secondAttribute="leading" constant="10" id="pCF-Ab-p28"/>
+                                    <constraint firstAttribute="height" constant="50" id="yAe-ba-wP4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChE-CN-uKf" userLabel="login_button_card">
+                                <rect key="frame" x="137.5" y="528.5" width="100" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hco-km-oRG">
+                                        <rect key="frame" x="10" y="10" width="80" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44319421052932739" green="0.45092350244522095" blue="0.4549068808555603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7fL-Mb-Rws"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hco-km-oRG" secondAttribute="trailing" constant="10" id="HSG-fo-agL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hco-km-oRG" secondAttribute="bottom" constant="10" id="Tjg-vo-qwJ"/>
+                                    <constraint firstItem="Hco-km-oRG" firstAttribute="top" secondItem="ChE-CN-uKf" secondAttribute="top" constant="10" id="YpO-mZ-9CU"/>
+                                    <constraint firstItem="Hco-km-oRG" firstAttribute="leading" secondItem="ChE-CN-uKf" secondAttribute="leading" constant="10" id="jbt-vE-yld"/>
+                                    <constraint firstAttribute="height" constant="50" id="jxA-Y0-hs7"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="icf-s4-BLk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G8a-Up-4Ka"/>
                             <constraint firstItem="Zp1-kk-X6S" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bNv-y0-jrf"/>
                             <constraint firstItem="Zp1-kk-X6S" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c0w-ec-AbI"/>
+                            <constraint firstItem="Zp1-kk-X6S" firstAttribute="top" secondItem="icf-s4-BLk" secondAttribute="bottom" constant="-25" id="gZt-MP-NKI"/>
+                            <constraint firstItem="ChE-CN-uKf" firstAttribute="top" secondItem="Zp1-kk-X6S" secondAttribute="bottom" constant="-25" id="krh-Va-c2p"/>
+                            <constraint firstItem="ChE-CN-uKf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xZl-hp-rSx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="loginCard" destination="Zp1-kk-X6S" id="BwX-o3-GnE"/>
+                        <outlet property="loginCard" destination="Zp1-kk-X6S" id="zab-Se-DgH"/>
+                        <outlet property="login_button_card" destination="ChE-CN-uKf" id="0do-jJ-aFV"/>
+                        <outlet property="logo_card" destination="icf-s4-BLk" id="bah-pK-H9r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="129.92957746478874"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mahi Spray_logo" width="552.47998046875" height="552.47998046875"/>
+    </resources>
 </document>
