@@ -358,7 +358,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtZ-sU-M8C" userLabel="sign_up_button_card">
-                                <rect key="frame" x="137.5" y="530" width="100" height="50"/>
+                                <rect key="frame" x="137.5" y="528.5" width="100" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-Sl-8Xq">
                                         <rect key="frame" x="10" y="10" width="80" height="30"/>
@@ -382,7 +382,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YtZ-sU-M8C" firstAttribute="centerX" secondItem="ff7-z8-z51" secondAttribute="centerX" id="KFy-cy-9TW"/>
-                            <constraint firstItem="YtZ-sU-M8C" firstAttribute="top" secondItem="zBv-Wz-Yhd" secondAttribute="bottom" constant="-23.5" id="S3a-0f-GZI"/>
+                            <constraint firstItem="YtZ-sU-M8C" firstAttribute="top" secondItem="zBv-Wz-Yhd" secondAttribute="bottom" constant="-25" id="S3a-0f-GZI"/>
                             <constraint firstItem="zBv-Wz-Yhd" firstAttribute="centerX" secondItem="ff7-z8-z51" secondAttribute="centerX" id="T60-Tx-frB"/>
                             <constraint firstItem="4dV-N8-yRa" firstAttribute="centerX" secondItem="ff7-z8-z51" secondAttribute="centerX" id="XgD-nK-X6Z"/>
                             <constraint firstItem="zBv-Wz-Yhd" firstAttribute="top" secondItem="4dV-N8-yRa" secondAttribute="bottom" constant="-25" id="bgn-Ee-MQE"/>
@@ -424,6 +424,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cdP-m0-bhJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oMK-WV-0jh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
