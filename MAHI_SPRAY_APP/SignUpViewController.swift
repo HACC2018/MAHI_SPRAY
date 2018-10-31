@@ -40,11 +40,18 @@ class SignUpViewController: UIViewController {
         Auth.auth().createUser(withEmail: usernameInputField.text!, password: createPasswordInputField.text!) { (user, error) in
             if user != nil {
                 print("User Created")
-                self.performSegue(withIdentifier: "loginController", sender: self)
+                
+                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginController") as? LoginViewController {
+                    self.present(vc, animated: false, completion: nil)
+                }
+                
             }
             
             else {
-                print("error! no input found!")
+                let alert = UIAlertController(title: "Sorry", message: "Please use a real email", preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "Okay", style: .default, handler: nil)
+                alert.addAction(okButton)
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
