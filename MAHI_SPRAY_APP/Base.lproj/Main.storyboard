@@ -428,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="129.08545727136433"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Controller-->
         <scene sceneID="Z8k-vA-PBy">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cdP-m0-bhJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main screen" automaticallyAdjustsScrollViewInsets="NO" id="cdP-m0-bhJ" customClass="HomeController" customModule="MAHI_SPRAY_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oMK-WV-0jh">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

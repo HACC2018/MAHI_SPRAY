@@ -49,7 +49,10 @@ class LoginViewController: UIViewController, MyDelegate {
     @IBAction func logInButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: usernameLogInputField.text!, password: passwordLogInputField.text!) { (user, error) in
             if user != nil {
-                
+                if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main screen") as? HomeController {
+                    //vc.delegate = self
+                    self.present(vc, animated: false, completion: nil)
+                }
             }
             
             else {

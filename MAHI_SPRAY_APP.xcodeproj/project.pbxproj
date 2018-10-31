@@ -16,6 +16,7 @@
 		55C5E4232188FAD900487101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4212188FAD900487101 /* LaunchScreen.storyboard */; };
 		55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E42A21898B5D00487101 /* SignUpViewController.swift */; };
 		55C5E42D2189A9D100487101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E42C2189A9D100487101 /* GoogleService-Info.plist */; };
+		55F1FED82189B779004C5C52 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F1FED72189B779004C5C52 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		55C5E4242188FAD900487101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C5E42A21898B5D00487101 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		55C5E42C2189A9D100487101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55F1FED72189B779004C5C52 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAHI_SPRAY_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.release.xcconfig"; sourceTree = "<group>"; };
 		B07144DCD5FF728F176024A6 /* Pods-MAHI_SPRAY_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				55C5E4152188FAD800487101 /* AppDelegate.swift */,
 				55C5E4172188FAD800487101 /* LoginViewController.swift */,
 				55C5E42A21898B5D00487101 /* SignUpViewController.swift */,
+				55F1FED72189B779004C5C52 /* HomeController.swift */,
 				55C5E4192188FAD800487101 /* Main.storyboard */,
 				55C5E41F2188FAD900487101 /* Assets.xcassets */,
 				55C5E4212188FAD900487101 /* LaunchScreen.storyboard */,
@@ -226,6 +229,7 @@
 				55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */,
 				55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */,
 				55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */,
+				55F1FED82189B779004C5C52 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
