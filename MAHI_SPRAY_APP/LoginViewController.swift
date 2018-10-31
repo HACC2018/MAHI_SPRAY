@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol MyDelegate: class {
     func logo_card_design(ViewToAffect: UIView)
@@ -36,8 +37,28 @@ class LoginViewController: UIViewController, MyDelegate {
         
     }
     
+    //Textfield Outlets
+    @IBOutlet weak var usernameLogInputField: UITextField!
+    
+    @IBOutlet weak var passwordLogInputField: UITextField!
+    
     @IBAction func go_sign_up_pressed(_ sender: UIButton) {
         needToCreateAccountButtonPressed()
+    }
+    
+    @IBAction func logInButton(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: usernameLogInputField.text!, password: passwordLogInputField.text!) { (user, error) in
+            if user != nil {
+                
+            }
+            
+            else {
+                let alert = UIAlertController(title: "Sorry", message: "EIther your username or password were wrong.", preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "Okay", style: .default, handler: nil)
+                alert.addAction(okButton)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     func needToCreateAccountButtonPressed() {

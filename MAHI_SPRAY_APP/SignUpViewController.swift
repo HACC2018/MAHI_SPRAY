@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
+    //Design Outlets
     @IBOutlet weak var sign_up_card: UIView!
     @IBOutlet weak var logo_card: UIView!
     @IBOutlet weak var sign_up_button_card: UIView!
@@ -28,6 +30,25 @@ class SignUpViewController: UIViewController {
         layer.colors = [UIColor.init(red: 0.301, green: 0.973, blue: 1.0, alpha: 0.5).cgColor, UIColor.init(red: 0.25882, green: 0.7137, blue: 0.9568, alpha: 0.5).cgColor]
         view.layer.insertSublayer(layer, at: 0)
     }
+    
+    //Textfield Input Outlets
+    @IBOutlet weak var usernameInputField: UITextField!
+    
+    @IBOutlet weak var createPasswordInputField: UITextField!
+    
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        Auth.auth().createUser(withEmail: usernameInputField.text!, password: createPasswordInputField.text!) { (user, error) in
+            if user != nil {
+                print("User Created")
+                self.performSegue(withIdentifier: "loginController", sender: self)
+            }
+            
+            else {
+                print("error! no input found!")
+            }
+        }
+    }
+    
     @IBAction func needToLogInButtonPressed(_ sender: UIButton) {
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginController") as? LoginViewController {
             self.present(vc, animated: false, completion: nil)

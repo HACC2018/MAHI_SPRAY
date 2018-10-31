@@ -144,6 +144,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Drd-o3-s6L"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.44319421052932739" green="0.45092350244522095" blue="0.4549068808555603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -173,6 +176,8 @@
                         <outlet property="loginCard" destination="Zp1-kk-X6S" id="fhv-ha-3MF"/>
                         <outlet property="login_button_card" destination="ChE-CN-uKf" id="vAY-bX-6xr"/>
                         <outlet property="logo_card" destination="icf-s4-BLk" id="vfV-YD-x39"/>
+                        <outlet property="passwordLogInputField" destination="JGl-d6-7nW" id="cy2-eT-vI7"/>
+                        <outlet property="usernameLogInputField" destination="57v-jL-KIY" id="6Rn-OE-4Mj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -366,6 +371,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpPressed:" destination="UhZ-dZ-rNw" eventType="touchUpInside" id="VhA-CK-wrt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.44319421050000002" green="0.45092350240000001" blue="0.45490688089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -391,9 +399,11 @@
                         <viewLayoutGuide key="safeArea" id="ff7-z8-z51"/>
                     </view>
                     <connections>
+                        <outlet property="createPasswordInputField" destination="4qT-4z-R5l" id="fyl-WX-5eC"/>
                         <outlet property="logo_card" destination="4dV-N8-yRa" id="B5P-nQ-WkL"/>
                         <outlet property="sign_up_button_card" destination="YtZ-sU-M8C" id="lF4-6Q-l6p"/>
                         <outlet property="sign_up_card" destination="zBv-Wz-Yhd" id="jJF-d4-HPK"/>
+                        <outlet property="usernameInputField" destination="jPA-Rt-5Xw" id="StD-ZK-Uhp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qta-7q-atf" userLabel="First Responder" sceneMemberID="firstResponder"/>
