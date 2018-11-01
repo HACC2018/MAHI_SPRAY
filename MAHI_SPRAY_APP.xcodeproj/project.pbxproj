@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E7D3FA627E32328317BC4F7 /* Pods_MAHI_SPRAY_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */; };
+		55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4152188FAD800487101 /* AppDelegate.swift */; };
+		55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4172188FAD800487101 /* LoginViewController.swift */; };
+		55C5E41B2188FAD800487101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4192188FAD800487101 /* Main.storyboard */; };
+		55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E41C2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld */; };
+		55C5E4202188FAD900487101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E41F2188FAD900487101 /* Assets.xcassets */; };
+		55C5E4232188FAD900487101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4212188FAD900487101 /* LaunchScreen.storyboard */; };
+		55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E42A21898B5D00487101 /* SignUpViewController.swift */; };
+		55C5E42D2189A9D100487101 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E42C2189A9D100487101 /* GoogleService-Info.plist */; };
+		55F1FED82189B779004C5C52 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F1FED72189B779004C5C52 /* HomeController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAHI_SPRAY_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C5E4152188FAD800487101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55C5E4172188FAD800487101 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		55C5E41A2188FAD800487101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55C5E41D2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MAHI_SPRAY_APP.xcdatamodel; sourceTree = "<group>"; };
+		55C5E41F2188FAD900487101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55C5E4222188FAD900487101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55C5E4242188FAD900487101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C5E42A21898B5D00487101 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		55C5E42C2189A9D100487101 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55F1FED72189B779004C5C52 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAHI_SPRAY_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.release.xcconfig"; sourceTree = "<group>"; };
+		B07144DCD5FF728F176024A6 /* Pods-MAHI_SPRAY_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55C5E40F2188FAD800487101 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7D3FA627E32328317BC4F7 /* Pods_MAHI_SPRAY_APP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22C73E44762B1F0563D32B7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B07144DCD5FF728F176024A6 /* Pods-MAHI_SPRAY_APP.debug.xcconfig */,
+				AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		303B0C8FBCADD55517D752CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55C5E4092188FAD800487101 = {
+			isa = PBXGroup;
+			children = (
+				55C5E4142188FAD800487101 /* MAHI_SPRAY_APP */,
+				55C5E4132188FAD800487101 /* Products */,
+				22C73E44762B1F0563D32B7D /* Pods */,
+				303B0C8FBCADD55517D752CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55C5E4132188FAD800487101 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55C5E4142188FAD800487101 /* MAHI_SPRAY_APP */ = {
+			isa = PBXGroup;
+			children = (
+				55C5E4152188FAD800487101 /* AppDelegate.swift */,
+				55C5E4172188FAD800487101 /* LoginViewController.swift */,
+				55C5E42A21898B5D00487101 /* SignUpViewController.swift */,
+				55F1FED72189B779004C5C52 /* HomeController.swift */,
+				55C5E4192188FAD800487101 /* Main.storyboard */,
+				55C5E41F2188FAD900487101 /* Assets.xcassets */,
+				55C5E4212188FAD900487101 /* LaunchScreen.storyboard */,
+				55C5E4242188FAD900487101 /* Info.plist */,
+				55C5E41C2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld */,
+				55C5E42C2189A9D100487101 /* GoogleService-Info.plist */,
+			);
+			path = MAHI_SPRAY_APP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55C5E4112188FAD800487101 /* MAHI_SPRAY_APP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55C5E4272188FAD900487101 /* Build configuration list for PBXNativeTarget "MAHI_SPRAY_APP" */;
+			buildPhases = (
+				BBB7BD37404CA15D685933F5 /* [CP] Check Pods Manifest.lock */,
+				55C5E40E2188FAD800487101 /* Sources */,
+				55C5E40F2188FAD800487101 /* Frameworks */,
+				55C5E4102188FAD800487101 /* Resources */,
+				8065ACC9789632E37534AFC7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MAHI_SPRAY_APP;
+			productName = MAHI_SPRAY_APP;
+			productReference = 55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55C5E40A2188FAD800487101 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = HACC;
+				TargetAttributes = {
+					55C5E4112188FAD800487101 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 55C5E40D2188FAD800487101 /* Build configuration list for PBXProject "MAHI_SPRAY_APP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55C5E4092188FAD800487101;
+			productRefGroup = 55C5E4132188FAD800487101 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55C5E4112188FAD800487101 /* MAHI_SPRAY_APP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55C5E4102188FAD800487101 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C5E4232188FAD900487101 /* LaunchScreen.storyboard in Resources */,
+				55C5E42D2189A9D100487101 /* GoogleService-Info.plist in Resources */,
+				55C5E4202188FAD900487101 /* Assets.xcassets in Resources */,
+				55C5E41B2188FAD800487101 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8065ACC9789632E37534AFC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBB7BD37404CA15D685933F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAHI_SPRAY_APP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55C5E40E2188FAD800487101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */,
+				55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */,
+				55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */,
+				55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */,
+				55F1FED82189B779004C5C52 /* HomeController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55C5E4192188FAD800487101 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C5E41A2188FAD800487101 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55C5E4212188FAD900487101 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C5E4222188FAD900487101 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55C5E4252188FAD900487101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55C5E4262188FAD900487101 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55C5E4282188FAD900487101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B07144DCD5FF728F176024A6 /* Pods-MAHI_SPRAY_APP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MAHI_SPRAY_APP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "HACC.MAHI-SPRAY-APP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55C5E4292188FAD900487101 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MAHI_SPRAY_APP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "HACC.MAHI-SPRAY-APP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55C5E40D2188FAD800487101 /* Build configuration list for PBXProject "MAHI_SPRAY_APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C5E4252188FAD900487101 /* Debug */,
+				55C5E4262188FAD900487101 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55C5E4272188FAD900487101 /* Build configuration list for PBXNativeTarget "MAHI_SPRAY_APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C5E4282188FAD900487101 /* Debug */,
+				55C5E4292188FAD900487101 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55C5E41C2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55C5E41D2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodel */,
+			);
+			currentVersion = 55C5E41D2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodel */;
+			path = MAHI_SPRAY_APP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 55C5E40A2188FAD800487101 /* Project object */;
+}
