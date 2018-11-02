@@ -36,12 +36,12 @@
                                 <rect key="frame" x="50" y="223" width="275" height="420"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DEP-dH-kBE">
-                                        <rect key="frame" x="25" y="40" width="230" height="355"/>
+                                        <rect key="frame" x="25" y="40" width="225" height="355"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01f-OE-hhA">
-                                                <rect key="frame" x="0.0" y="0.0" width="230" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="55"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="nu2-3r-YgI"/>
+                                                    <constraint firstAttribute="height" constant="55" id="yOu-5M-Ih9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Yellowtail-Regular" family="Yellowtail" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,35 +49,59 @@
                                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="2"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="57v-jL-KIY" userLabel="username_textfield">
-                                                <rect key="frame" x="0.0" y="60" width="230" height="50"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-AD-soV">
+                                                <rect key="frame" x="0.0" y="55" width="225" height="0.0"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="57v-jL-KIY" userLabel="username_textfield" customClass="UITextFieldAttributes" customModule="MAHI_SPRAY_APP" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="55" width="225" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="0ly-Ow-cFv"/>
                                                 </constraints>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="next" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ed-AD-soV">
-                                                <rect key="frame" x="0.0" y="110" width="230" height="10"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-ZQ-Mau">
+                                                <rect key="frame" x="0.0" y="105" width="225" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="10" id="hMZ-Ko-I6j"/>
+                                                    <constraint firstAttribute="height" constant="10" id="FAA-do-CTe"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-d6-7nW" userLabel="password_textfield">
-                                                <rect key="frame" x="0.0" y="120" width="230" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-d6-7nW" userLabel="password_textfield" customClass="UITextFieldAttributes" customModule="MAHI_SPRAY_APP" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="115" width="225" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="3xd-NZ-1se"/>
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password-lock-1"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-Bb-ZIU">
-                                                <rect key="frame" x="0.0" y="170" width="230" height="185"/>
+                                                <rect key="frame" x="0.0" y="165" width="225" height="190"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,6 +111,12 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="01f-OE-hhA" firstAttribute="trailing" secondItem="DEP-dH-kBE" secondAttribute="trailingMargin" id="3sB-t9-nUY"/>
+                                            <constraint firstItem="01f-OE-hhA" firstAttribute="top" secondItem="DEP-dH-kBE" secondAttribute="topMargin" id="mBj-VA-N7u"/>
+                                            <constraint firstItem="57v-jL-KIY" firstAttribute="top" secondItem="01f-OE-hhA" secondAttribute="bottom" id="oP6-aq-LWc"/>
+                                            <constraint firstItem="01f-OE-hhA" firstAttribute="leading" secondItem="DEP-dH-kBE" secondAttribute="leadingMargin" id="pdo-Nr-Tf7"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.18423256278038025" green="0.17656993865966797" blue="0.16862812638282776" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -100,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="420" id="7gW-Jm-ClA">
                                         <variation key="heightClass=compact" constant="250"/>
                                     </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="DEP-dH-kBE" secondAttribute="trailing" constant="20" id="dbf-ea-fcl"/>
+                                    <constraint firstAttribute="trailing" secondItem="DEP-dH-kBE" secondAttribute="trailing" constant="25" id="dbf-ea-fcl"/>
                                     <constraint firstItem="DEP-dH-kBE" firstAttribute="leading" secondItem="Zp1-kk-X6S" secondAttribute="leading" constant="25" id="kVg-I9-Q0S"/>
                                     <constraint firstAttribute="bottom" secondItem="DEP-dH-kBE" secondAttribute="bottom" constant="25" id="try-Pl-qjd"/>
                                 </constraints>
@@ -258,49 +288,72 @@
                                         <rect key="frame" x="25" y="40" width="225" height="355"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwV-Iz-edr">
-                                                <rect key="frame" x="0.0" y="0.0" width="225" height="24"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="0Rk-7a-twb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxL-gs-8Bb">
-                                                <rect key="frame" x="0.0" y="24" width="225" height="10"/>
+                                                <rect key="frame" x="0.0" y="55" width="225" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="AlE-3F-Kjh"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jPA-Rt-5Xw" userLabel="create_username_textfield">
-                                                <rect key="frame" x="0.0" y="34" width="225" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jPA-Rt-5Xw" userLabel="create_username_textfield" customClass="UITextFieldAttributes" customModule="MAHI_SPRAY_APP" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="65" width="225" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="KN0-oC-nPv"/>
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="email"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98m-f8-4f2">
-                                                <rect key="frame" x="0.0" y="84" width="225" height="10"/>
+                                                <rect key="frame" x="0.0" y="115" width="225" height="10"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="Au6-B0-UiN"/>
                                                 </constraints>
                                             </view>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-4z-R5l" userLabel="create_password_textfield">
-                                                <rect key="frame" x="0.0" y="94" width="225" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-4z-R5l" userLabel="create_password_textfield" customClass="UITextFieldAttributes" customModule="MAHI_SPRAY_APP" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="125" width="225" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Mjf-si-BnP"/>
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="username"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="password-lock-1"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY1-aW-jd1">
-                                                <rect key="frame" x="0.0" y="144" width="225" height="211"/>
+                                                <rect key="frame" x="0.0" y="175" width="225" height="180"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
-                                                <state key="normal" title="I have an account.">
+                                                <state key="normal" title="I have an account">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -308,6 +361,12 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rwV-Iz-edr" firstAttribute="leading" secondItem="f9c-Uw-Bbz" secondAttribute="leading" id="2Lz-nk-ghK"/>
+                                            <constraint firstItem="rwV-Iz-edr" firstAttribute="top" secondItem="f9c-Uw-Bbz" secondAttribute="top" id="VBB-pv-H8a"/>
+                                            <constraint firstAttribute="trailing" secondItem="rwV-Iz-edr" secondAttribute="trailing" id="a50-UY-SEl"/>
+                                            <constraint firstItem="bxL-gs-8Bb" firstAttribute="top" secondItem="rwV-Iz-edr" secondAttribute="bottom" id="gzT-Kl-id3"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1842325628" green="0.17656993870000001" blue="0.16862812639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -472,6 +531,8 @@
     <resources>
         <image name="Kahumana_02" width="1872" height="1248"/>
         <image name="Mahi Spray_logo" width="552.47998046875" height="552.47998046875"/>
+        <image name="email" width="37.5" height="37.5"/>
+        <image name="password-lock-1" width="512" height="512"/>
         <image name="taro_leaves_01" width="1872" height="1248"/>
     </resources>
 </document>

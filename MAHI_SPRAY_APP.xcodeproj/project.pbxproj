@@ -21,6 +21,7 @@
 		676235B2218BD5EA00D6B9D0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 676235B0218BD5EA00D6B9D0 /* OpenSans-Regular.ttf */; };
 		676235B3218BD5EA00D6B9D0 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 676235B1218BD5EA00D6B9D0 /* OpenSans-Light.ttf */; };
 		676235B5218BD75100D6B9D0 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 676235B4218BD75100D6B9D0 /* OpenSans-Bold.ttf */; };
+		676235B7218C43AB00D6B9D0 /* UITextFieldAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676235B6218C43AB00D6B9D0 /* UITextFieldAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		676235B0218BD5EA00D6B9D0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		676235B1218BD5EA00D6B9D0 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		676235B4218BD75100D6B9D0 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		676235B6218C43AB00D6B9D0 /* UITextFieldAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldAttributes.swift; sourceTree = "<group>"; };
 		AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.release.xcconfig"; sourceTree = "<group>"; };
 		B07144DCD5FF728F176024A6 /* Pods-MAHI_SPRAY_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAHI_SPRAY_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 				55C5E4242188FAD900487101 /* Info.plist */,
 				55C5E41C2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld */,
 				55C5E42C2189A9D100487101 /* GoogleService-Info.plist */,
+				676235B6218C43AB00D6B9D0 /* UITextFieldAttributes.swift */,
 			);
 			path = MAHI_SPRAY_APP;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */,
 				55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */,
+				676235B7218C43AB00D6B9D0 /* UITextFieldAttributes.swift in Sources */,
 				55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */,
 				55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */,
 				55F1FED82189B779004C5C52 /* HomeController.swift in Sources */,
@@ -401,6 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3RY89GV3J8;
 				INFOPLIST_FILE = MAHI_SPRAY_APP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3RY89GV3J8;
 				INFOPLIST_FILE = MAHI_SPRAY_APP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
