@@ -510,7 +510,7 @@
         <!--Settings-->
         <scene sceneID="b1w-6d-pDu">
             <objects>
-                <tableViewController id="SFy-To-4Dp" sceneMemberID="viewController">
+                <tableViewController id="SFy-To-4Dp" customClass="SettingsViewController" customModule="MAHI_SPRAY_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3mr-Ca-KOg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -551,7 +551,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="RJb-S8-XjH">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="3Ru-dj-300"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="3Ru-dj-300">
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="SFy-To-4Dp" id="ZRT-IU-3z2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRC-4W-zZY" userLabel="First Responder" sceneMemberID="firstResponder"/>

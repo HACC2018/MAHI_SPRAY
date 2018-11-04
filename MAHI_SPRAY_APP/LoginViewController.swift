@@ -90,8 +90,8 @@ class LoginViewController: UIViewController, MyDelegate {
                 
             else {
                 self.activityShow()
-                let alert = UIAlertController(title: "Sorry", message: "EIther your username or password were wrong.", preferredStyle: .alert)
-                let okButton = UIAlertAction(title: "Okay", style: .default, handler: nil)
+                let alert = UIAlertController(title: "Sorry", message: "Either your username or password were wrong.", preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(okButton)
                 self.present(alert, animated: true, completion: nil)
             }

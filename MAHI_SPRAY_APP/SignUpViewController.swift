@@ -56,7 +56,7 @@ class SignUpViewController: UIViewController {
             
             else {
                 let alert = UIAlertController(title: "Sorry", message: "Please use a real email", preferredStyle: .alert)
-                let okButton = UIAlertAction(title: "Okay", style: .default, handler: nil)
+                let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(okButton)
                 self.present(alert, animated: true, completion: nil)
             }
