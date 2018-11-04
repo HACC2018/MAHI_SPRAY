@@ -8,5 +8,6 @@ target 'MAHI_SPRAY_APP' do
   # Pods for MAHI_SPRAY_APP
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

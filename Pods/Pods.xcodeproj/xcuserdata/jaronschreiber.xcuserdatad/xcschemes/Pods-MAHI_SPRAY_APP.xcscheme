@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "470293586B5D32773F01BD16A121CCF8"
+               BlueprintIdentifier = "D46151CDAA8DCB3D9BE6579A57804A5B"
                BuildableName = "Pods_MAHI_SPRAY_APP.framework"
                BlueprintName = "Pods-MAHI_SPRAY_APP"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "470293586B5D32773F01BD16A121CCF8"
+            BlueprintIdentifier = "D46151CDAA8DCB3D9BE6579A57804A5B"
             BuildableName = "Pods_MAHI_SPRAY_APP.framework"
             BlueprintName = "Pods-MAHI_SPRAY_APP"
             ReferencedContainer = "container:Pods.xcodeproj">

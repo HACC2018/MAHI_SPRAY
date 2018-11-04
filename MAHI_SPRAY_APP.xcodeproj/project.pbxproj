@@ -10,6 +10,8 @@
 		3E7D3FA627E32328317BC4F7 /* Pods_MAHI_SPRAY_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */; };
 		5543E1F3218EDE5300B9208E /* MahiTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F2218EDE5300B9208E /* MahiTabsController.swift */; };
 		5543E1F5218EDF3400B9208E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F4218EDF3400B9208E /* SettingsViewController.swift */; };
+		5543E1F7218EE25B00B9208E /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F6218EE25B00B9208E /* RecordsViewController.swift */; };
+		5543E1F9218EE2A800B9208E /* MyMahiViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F8218EE2A800B9208E /* MyMahiViewControllerTableViewController.swift */; };
 		55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4152188FAD800487101 /* AppDelegate.swift */; };
 		55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4172188FAD800487101 /* LoginViewController.swift */; };
 		55C5E41B2188FAD800487101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4192188FAD800487101 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		5543E1F2218EDE5300B9208E /* MahiTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahiTabsController.swift; sourceTree = "<group>"; };
 		5543E1F4218EDF3400B9208E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5543E1F6218EE25B00B9208E /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
+		5543E1F8218EE2A800B9208E /* MyMahiViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMahiViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAHI_SPRAY_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C5E4152188FAD800487101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C5E4172188FAD800487101 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				55C5E42A21898B5D00487101 /* SignUpViewController.swift */,
 				5543E1F2218EDE5300B9208E /* MahiTabsController.swift */,
 				5543E1F4218EDF3400B9208E /* SettingsViewController.swift */,
+				5543E1F6218EE25B00B9208E /* RecordsViewController.swift */,
+				5543E1F8218EE2A800B9208E /* MyMahiViewControllerTableViewController.swift */,
 				55C5E4192188FAD800487101 /* Main.storyboard */,
 				55C5E41F2188FAD900487101 /* Assets.xcassets */,
 				55C5E4212188FAD900487101 /* LaunchScreen.storyboard */,
@@ -184,6 +190,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MAHI_SPRAY_APP/Pods-MAHI_SPRAY_APP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -192,6 +199,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,9 +239,11 @@
 				55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */,
 				55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */,
 				55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */,
+				5543E1F9218EE2A800B9208E /* MyMahiViewControllerTableViewController.swift in Sources */,
 				5543E1F3218EDE5300B9208E /* MahiTabsController.swift in Sources */,
 				55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */,
 				5543E1F5218EDF3400B9208E /* SettingsViewController.swift in Sources */,
+				5543E1F7218EE25B00B9208E /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
