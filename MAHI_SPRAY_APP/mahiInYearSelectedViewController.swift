@@ -1,32 +1,23 @@
 //
-//  MyMahiViewController.swift
-//  MAHI_SPRAY_APP
+//  mahiInYearSelectedViewController.swift
+//  
 //
-//  Created by Jaron Schreiber on 11/3/18.
-//  Copyright © 2018 HACC. All rights reserved.
+//  Created by Jaron Schreiber on 11/5/18.
 //
 
 import UIKit
 
-protocol addMahiDelegate: class {
-    func removeBlur()
+protocol mahiRecordsDelegate: class {
+    var mahiDate: [Date] { get set }
+    
 }
 
-class MyMahiViewController: UITableViewController, addMahiDelegate {
-        
-    //UIBlurEffect
-    let visualEffectView = UIVisualEffectView()
+class mahiInYearSelectedViewController: UITableViewController {
 
+    weak var delegate: mahiRecordsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Blur Behind Add Mahi Segue
-        visualEffectView.effect = nil
-        visualEffectView.frame = self.view.bounds
-        
-        farms.append(Mahi(name: "Farm One", address: "111 Kalanui Rd", yearApplied: 1999, image: UIImage(named: "taro_background")!))
-        farms.append(Mahi(name: "Farm Two", address: "222 Kalanui Rd", yearApplied: 2001, image: UIImage(named: "patch_background")!))
-        tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,24 +25,7 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    func removeBlur() {
-        self.visualEffectView.effect = nil
-        self.visualEffectView.removeFromSuperview()
-        self.tableView.reloadData()
-    }
 
-    @IBAction func addMahiButtonPressed(_ sender: UIBarButtonItem) {
-        
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addMahiController") as? AddMahiPopUpController {
-            vc.delegate = self
-            self.present(vc, animated: true, completion: nil)
-            UIView.animate(withDuration: 1.0) {
-                self.visualEffectView.effect = UIBlurEffect(style: UIBlurEffect.Style.prominent)
-                self.view.addSubview(self.visualEffectView)
-            }
-        }
-    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,23 +35,19 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return farms.count
+        return (delegate?.mahiDate.count)!
     }
-    
+
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "farmCell", for: indexPath) as? farmLotTableViewCell
-        
-//        cell.textLabel?.text = farms[indexPath.row].name
-        
-        if let farmCellExists = cell {
-            farmCellExists.farmLotNameLabel?.text = farms[indexPath.row].name
-            farmCellExists.farmLotAddressLabel.text = farms[indexPath.row].address
-            farmCellExists.backgroundImage.image = farms[indexPath.row].image
-        }
-        
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
+        return cell
     }
-    
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

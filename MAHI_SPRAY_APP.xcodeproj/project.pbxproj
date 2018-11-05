@@ -14,6 +14,8 @@
 		5543E1F9218EE2A800B9208E /* MyMahiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */; };
 		55A769322190318C0051FEDD /* farmLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A769312190318C0051FEDD /* farmLotTableViewCell.swift */; };
 		55A7693421903D140051FEDD /* AddMahiPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7693321903D140051FEDD /* AddMahiPopUpController.swift */; };
+		55AB38152190C89B0078F243 /* mahiInYearSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB38142190C89B0078F243 /* mahiInYearSelectedViewController.swift */; };
+		55AB381B2190E29D0078F243 /* farmsDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB381A2190E29D0078F243 /* farmsDataStruct.swift */; };
 		55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4152188FAD800487101 /* AppDelegate.swift */; };
 		55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4172188FAD800487101 /* LoginViewController.swift */; };
 		55C5E41B2188FAD800487101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4192188FAD800487101 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMahiViewController.swift; sourceTree = "<group>"; };
 		55A769312190318C0051FEDD /* farmLotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmLotTableViewCell.swift; sourceTree = "<group>"; };
 		55A7693321903D140051FEDD /* AddMahiPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMahiPopUpController.swift; sourceTree = "<group>"; };
+		55AB38142190C89B0078F243 /* mahiInYearSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mahiInYearSelectedViewController.swift; path = "/Users/jaronschreiber/OneDrive/EC Projects/Xcode Projects/HACC/MAHI_SPRAY_APP/MAHI_SPRAY_APP/mahiInYearSelectedViewController.swift"; sourceTree = "<absolute>"; };
+		55AB381A2190E29D0078F243 /* farmsDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmsDataStruct.swift; sourceTree = "<group>"; };
 		55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAHI_SPRAY_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C5E4152188FAD800487101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C5E4172188FAD800487101 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55AB38162190DFF10078F243 /* Records */ = {
+			isa = PBXGroup;
+			children = (
+				5543E1F6218EE25B00B9208E /* RecordsViewController.swift */,
+				55AB38142190C89B0078F243 /* mahiInYearSelectedViewController.swift */,
+			);
+			path = Records;
+			sourceTree = "<group>";
+		};
+		55AB38172190DFFF0078F243 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5543E1F4218EDF3400B9208E /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		55AB38182190E00F0078F243 /* My Mahi */ = {
+			isa = PBXGroup;
+			children = (
+				5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */,
+				55A769312190318C0051FEDD /* farmLotTableViewCell.swift */,
+				55A7693321903D140051FEDD /* AddMahiPopUpController.swift */,
+			);
+			path = "My Mahi";
+			sourceTree = "<group>";
+		};
+		55AB38192190E18C0078F243 /* Login Signup */ = {
+			isa = PBXGroup;
+			children = (
+				55C5E4172188FAD800487101 /* LoginViewController.swift */,
+				55C5E42A21898B5D00487101 /* SignUpViewController.swift */,
+			);
+			path = "Login Signup";
+			sourceTree = "<group>";
+		};
 		55C5E4092188FAD800487101 = {
 			isa = PBXGroup;
 			children = (
@@ -97,14 +137,12 @@
 			isa = PBXGroup;
 			children = (
 				55C5E4152188FAD800487101 /* AppDelegate.swift */,
-				55C5E4172188FAD800487101 /* LoginViewController.swift */,
-				55C5E42A21898B5D00487101 /* SignUpViewController.swift */,
 				5543E1F2218EDE5300B9208E /* MahiTabsController.swift */,
-				5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */,
-				5543E1F6218EE25B00B9208E /* RecordsViewController.swift */,
-				5543E1F4218EDF3400B9208E /* SettingsViewController.swift */,
-				55A769312190318C0051FEDD /* farmLotTableViewCell.swift */,
-				55A7693321903D140051FEDD /* AddMahiPopUpController.swift */,
+				55AB381A2190E29D0078F243 /* farmsDataStruct.swift */,
+				55AB38192190E18C0078F243 /* Login Signup */,
+				55AB38182190E00F0078F243 /* My Mahi */,
+				55AB38162190DFF10078F243 /* Records */,
+				55AB38172190DFFF0078F243 /* Settings */,
 				55C5E4192188FAD800487101 /* Main.storyboard */,
 				55C5E41F2188FAD900487101 /* Assets.xcassets */,
 				55C5E4212188FAD900487101 /* LaunchScreen.storyboard */,
@@ -250,8 +288,10 @@
 				5543E1F3218EDE5300B9208E /* MahiTabsController.swift in Sources */,
 				55C5E41E2188FAD800487101 /* MAHI_SPRAY_APP.xcdatamodeld in Sources */,
 				55A7693421903D140051FEDD /* AddMahiPopUpController.swift in Sources */,
+				55AB381B2190E29D0078F243 /* farmsDataStruct.swift in Sources */,
 				5543E1F5218EDF3400B9208E /* SettingsViewController.swift in Sources */,
 				5543E1F7218EE25B00B9208E /* RecordsViewController.swift in Sources */,
+				55AB38152190C89B0078F243 /* mahiInYearSelectedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

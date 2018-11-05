@@ -11,30 +11,16 @@ import Firebase
 
 var farms : [Mahi] = []
 
-class Mahi {
-    // Properties
-    var name: String
-    var yearApplied: Int
-    var address: String
-    var image: UIImage
-    
-    init(name: String, address: String, yearApplied: Int, image: UIImage) {
-        // Initialize stored properties
-        self.name = name
-        self.address = address
-        self.yearApplied = yearApplied
-        self.image = image
-    }
-    
-}
-
-class RecordsViewController: UITableViewController {
+class RecordsViewController: UITableViewController, mahiRecordsDelegate {
     
     var ref: DatabaseReference!
     var lotsRef: DatabaseReference!
     var handle: DatabaseHandle!
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        //var allYears : [Int] = []
+        
         self.tableView.reloadData()
     }
     
@@ -52,28 +38,51 @@ class RecordsViewController: UITableViewController {
         return 1
     }
     
-    var ordered : [Int] = []
+    var ordered : [String] = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        var allYears : [Int] = []
         
-        for year in farms {
-            allYears.append(year.yearApplied)
+        ordered.removeAll()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY"
+        
+        for time in farms {
+            
+            let nameOfMonth = dateFormatter.string(from: time.dateApplied)
+            
+            ordered.append(nameOfMonth)
         }
         
-        ordered = Array(allYears)
+        //ordered = Array(allYears)
+        ordered.sort()
         
         return ordered.count
     }
     
+    var mahiDate: [Date] = []
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath)
         
-        cell.textLabel?.text = "\(ordered[indexPath.row])"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY"
+        
+        cell.textLabel?.text = "\(dateFormatter.string(from: farms[indexPath.row].dateApplied))"
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath)
+        
+//        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mahiInYearSelected") as? mahiInYearSelectedViewController {
+//            self.present(vc, animated: false, completion: nil)
+//            vc.delegate = self
+//            mahiDate.append(farms[indexPath.row].dateApplied)
+//        }
+        
     }
     
     

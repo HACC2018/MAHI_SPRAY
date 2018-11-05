@@ -10,13 +10,13 @@ import UIKit
 
 class AddMahiPopUpController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    @IBOutlet weak var dateAppliedPicker: UIDatePicker!
     @IBOutlet weak var mahiNameTextField: UITextField!
     @IBOutlet weak var mahiAddressTextField: UITextField!
-    @IBOutlet weak var yearAppliedField: UITextField!
-    
-    weak var delegate: addMahiDelegate?
     @IBOutlet var outsideView: UIView!
     @IBOutlet weak var addMahiCard: UIView!
+    
+    weak var delegate: addMahiDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +27,14 @@ class AddMahiPopUpController: UIViewController, UITextFieldDelegate, UINavigatio
         
         mahiNameTextField.delegate = self
         mahiAddressTextField.delegate = self
-        yearAppliedField.delegate = self
     }
     
+    //Image Picker
     let imagePickerController = UIImagePickerController()
     
     @IBAction func addImageTapped(_ sender: UITapGestureRecognizer) {
         mahiNameTextField.resignFirstResponder()
-        mahiAddressTextField.resignFirstResponder()
-        yearAppliedField.resignFirstResponder()
-        
+        mahiAddressTextField.resignFirstResponder()        
         
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.allowsEditing = false
@@ -75,11 +73,19 @@ class AddMahiPopUpController: UIViewController, UITextFieldDelegate, UINavigatio
         return true
     }
     
+    @IBAction func dataOfApplication(_ sender: UIDatePicker) {
+        
+    }
+    
+    //Date Picker Format
+    //let formatter = DateFormatter()
+    
     @IBAction func done(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         
-        if let mahiName = mahiNameTextField.text, let mahiAddress = mahiAddressTextField.text, let mahiYear = yearAppliedField.text {
-            let newFarm : Mahi = Mahi(name: mahiName, address: mahiAddress, yearApplied: Int(mahiYear) ?? 2018, image: imagePicked.image ?? UIImage(named: "no_photo")!)
+        if let mahiName = mahiNameTextField.text, let mahiAddress = mahiAddressTextField.text {
+            let newFarm : Mahi = Mahi(name: mahiName, address: mahiAddress, dateApplied: dateAppliedPicker.date, image: imagePicked.image ?? UIImage(named: "no_photo")!)
+                
             farms.append(newFarm)
         }
         
