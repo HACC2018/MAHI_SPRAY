@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     //Design Outlets
     @IBOutlet weak var sign_up_card: UIView!
@@ -39,6 +39,9 @@ class SignUpViewController: UIViewController {
         createPasswordInputField.layer.shadowRadius = 5
         createPasswordInputField.layer.shadowOpacity = 0.2
         createPasswordInputField.layer.shadowOffset = CGSize(width: 1, height: 5)
+        
+        usernameInputField.delegate = self
+        createPasswordInputField.delegate = self
     }
     
     //Textfield Input Outlets
@@ -61,6 +64,13 @@ class SignUpViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        //or
+        //self.view.endEditing(true)
+        return true
     }
     
     @IBAction func needToLogInButtonPressed(_ sender: UIButton) {

@@ -14,7 +14,7 @@ protocol MyDelegate: class {
     func backgroundImageWithHue(viewYouIn: UIView, backgroundImageName: String, RedValFrom: CGFloat, GreenValFrom: CGFloat, BlueValFrom: CGFloat, RedValTo: CGFloat, GreenValTo: CGFloat, BlueValTo: CGFloat)
 }
 
-class LoginViewController: UIViewController, MyDelegate {
+class LoginViewController: UIViewController, MyDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var loginCard: UIView!
     @IBOutlet weak var logo_card: UIView!
@@ -44,6 +44,12 @@ class LoginViewController: UIViewController, MyDelegate {
         usernameLogInputField.layer.shadowOpacity = 0.1
         passwordLogInputField.layer.shadowRadius = 10
         passwordLogInputField.layer.shadowOpacity = 0.1
+        
+        usernameLogInputField.delegate = self
+        passwordLogInputField.delegate = self
+        
+        usernameLogInputField.text = "jkschrei@gmail.com"
+        passwordLogInputField.text = "123456"
     }
     
     //Textfield Outlets
@@ -53,6 +59,12 @@ class LoginViewController: UIViewController, MyDelegate {
     
     @IBAction func go_sign_up_pressed(_ sender: UIButton) {
         needToCreateAccountButtonPressed()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     func activityShow() {

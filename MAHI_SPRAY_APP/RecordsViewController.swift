@@ -9,15 +9,19 @@
 import UIKit
 import Firebase
 
+var farms : [Mahi] = []
+
 class Mahi {
     // Properties
     var name: String
-    var pesticide: String
+    var yearApplied: Int
+    var address: String
     
-    init(name: String, pesticide: String) {
+    init(name: String, address: String, yearApplied: Int) {
         // Initialize stored properties
         self.name = name
-        self.pesticide = pesticide
+        self.address = address
+        self.yearApplied = yearApplied
     }
     
 }
@@ -28,50 +32,15 @@ class RecordsViewController: UITableViewController {
     var lotsRef: DatabaseReference!
     var handle: DatabaseHandle!
     
-    var farms : [String] = []
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //print("anything")
-        
-        ref = Database.database().reference()
-        lotsRef = Database.database().reference().child("Lots")
-        
-        //let childRef = Database.database().reference(withPath: "Products")
-        
-        // 3
-        //let itemsRef = ref.child("")
-        
-        //let userID = Auth.auth().currentUser?.uid
-        
-        //        ref.observe(.value, with: { snapshot in
-        //
-        //            for child in snapshot.children {
-        //                if let snapshot = child as? String,
-        //                    let groceryItem = Mahi(name: snapshot) {
-        //                    farms.append(groceryItem)
-        //                }
-        //            }
-        //            print(snapshot.value as Any)
-        //        })
-        
-        handle = lotsRef?.queryOrdered(byChild: "Farm1").queryEqual(toValue: 0).observe(.childAdded, with: { (snapshot) in
-            let pesticide = snapshot.value as? String
-            
-            if let actualPesticide = pesticide {
-                
-                self.farms.append(actualPesticide)
-                self.tableView.reloadData()
-                print("hello? gggggg")
-            }
-        } )
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//
+//        ref = Database.database().reference()
+//        lotsRef = Database.database().reference().child("Lots")
     }
     
     // MARK: - Table view data source
@@ -81,16 +50,27 @@ class RecordsViewController: UITableViewController {
         return 1
     }
     
+    var ordered : [Int] = []
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return farms.count
+        var allYears : [Int] = []
+        
+        for year in farms {
+            allYears.append(year.yearApplied)
+        }
+        
+        ordered = Array(allYears)
+        
+        return ordered.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "farmCell", for: indexPath)
-        cell.textLabel?.text = farms[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath)
         
+        cell.textLabel?.text = "\(ordered[indexPath.row])"
+
         return cell
     }
     
