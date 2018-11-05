@@ -16,12 +16,14 @@ class Mahi {
     var name: String
     var yearApplied: Int
     var address: String
+    var image: UIImage
     
-    init(name: String, address: String, yearApplied: Int) {
+    init(name: String, address: String, yearApplied: Int, image: UIImage) {
         // Initialize stored properties
         self.name = name
         self.address = address
         self.yearApplied = yearApplied
+        self.image = image
     }
     
 }

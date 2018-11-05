@@ -13,7 +13,7 @@ protocol addMahiDelegate: class {
 }
 
 class MyMahiViewController: UITableViewController, addMahiDelegate {
-    
+        
     //UIBlurEffect
     let visualEffectView = UIVisualEffectView()
 
@@ -24,8 +24,8 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
         visualEffectView.effect = nil
         visualEffectView.frame = self.view.bounds
         
-        farms.append(Mahi(name: "Farm One", address: "111 Kalanui Rd", yearApplied: 1999))
-        farms.append(Mahi(name: "Farm Two", address: "222 Kalanui Rd", yearApplied: 2001))
+        farms.append(Mahi(name: "Farm One", address: "111 Kalanui Rd", yearApplied: 1999, image: UIImage(named: "taro_background")!))
+        farms.append(Mahi(name: "Farm Two", address: "222 Kalanui Rd", yearApplied: 2001, image: UIImage(named: "patch_background")!))
         tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
@@ -72,6 +72,7 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
         if let farmCellExists = cell {
             farmCellExists.farmLotNameLabel?.text = farms[indexPath.row].name
             farmCellExists.farmLotAddressLabel.text = farms[indexPath.row].address
+            farmCellExists.backgroundImage.image = farms[indexPath.row].image
         }
         
         return cell!

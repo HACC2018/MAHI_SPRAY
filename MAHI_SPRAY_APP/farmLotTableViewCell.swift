@@ -14,6 +14,7 @@ class farmLotTableViewCell: UITableViewCell {
     @IBOutlet weak var farmLotAddressLabel: UILabel!
     @IBOutlet weak var farmCardView: UIView!
     @IBOutlet weak var outsideContentView: UIView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
