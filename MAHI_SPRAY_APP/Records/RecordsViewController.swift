@@ -69,7 +69,7 @@ class RecordsViewController: UITableViewController, mahiRecordsDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY"
         
-        cell.textLabel?.text = "\(dateFormatter.string(from: farms[indexPath.row].dateApplied))"
+        cell.textLabel?.text = "\(ordered[indexPath.row])"
 
         return cell
     }
