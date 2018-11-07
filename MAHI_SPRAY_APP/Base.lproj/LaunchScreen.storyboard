@@ -21,22 +21,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patch_background" translatesAutoresizingMaskIntoConstraints="NO" id="vgH-q1-HBo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mahi Spray_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vxF-wA-2fq">
-                                <rect key="frame" x="87.666666666666686" y="311" width="200" height="200"/>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SQJ-fX-E51">
+                                <rect key="frame" x="112.66666666666669" y="336" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="EwC-3G-ydT"/>
-                                    <constraint firstAttribute="height" constant="200" id="onL-uc-AUP"/>
+                                    <constraint firstAttribute="height" constant="150" id="BP7-3N-1Lx"/>
+                                    <constraint firstAttribute="width" constant="150" id="baN-HA-m1f"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SQJ-fX-E51" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2ON-mG-C8B"/>
+                            <constraint firstItem="SQJ-fX-E51" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9oe-YV-hYA"/>
                             <constraint firstItem="vgH-q1-HBo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="G7H-Wu-OIF"/>
                             <constraint firstAttribute="bottom" secondItem="vgH-q1-HBo" secondAttribute="bottom" id="VNs-Jd-UMh"/>
                             <constraint firstItem="vgH-q1-HBo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aqn-uE-kYn"/>
-                            <constraint firstItem="vxF-wA-2fq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gOV-6u-41B"/>
                             <constraint firstAttribute="trailing" secondItem="vgH-q1-HBo" secondAttribute="trailing" id="hVM-a9-36l"/>
-                            <constraint firstItem="vxF-wA-2fq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="wZs-58-pP5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mahi Spray_logo" width="552.47998046875" height="552.47998046875"/>
+        <image name="logo" width="2302" height="2302"/>
         <image name="patch_background" width="1872" height="1248"/>
     </resources>
 </document>

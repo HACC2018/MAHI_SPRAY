@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 var farms : [Mahi] = []
+var mahiMonths : [String] = []
 
 class RecordsViewController: UITableViewController, mahiRecordsDelegate {
     
@@ -17,9 +18,20 @@ class RecordsViewController: UITableViewController, mahiRecordsDelegate {
     var lotsRef: DatabaseReference!
     var handle: DatabaseHandle!
     
+    var ordered : [String] = []
+    
     override func viewWillAppear(_ animated: Bool) {
         
-        //var allYears : [Int] = []
+        unordered.removeAll()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY"
+        
+        for time in farms {
+            
+            let year = dateFormatter.string(from: time.dateApplied)
+            
+            unordered.append(year)
+        }
         
         self.tableView.reloadData()
     }
@@ -38,51 +50,52 @@ class RecordsViewController: UITableViewController, mahiRecordsDelegate {
         return 1
     }
     
-    var ordered : [String] = []
+    var unordered : [String] = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        ordered.removeAll()
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY"
-        
-        for time in farms {
-            
-            let nameOfMonth = dateFormatter.string(from: time.dateApplied)
-            
-            ordered.append(nameOfMonth)
-        }
-        
-        //ordered = Array(allYears)
-        ordered.sort()
-        
+        ordered = unordered.removingDuplicates()
         return ordered.count
     }
     
-    var mahiDate: [Date] = []
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath) as? yearCell
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY"
-        
-        cell.textLabel?.text = "\(ordered[indexPath.row])"
+        ordered.sort()
+        cell?.yearLabel.text = "\(ordered[indexPath.row])"
 
-        return cell
+        return cell!
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath)
         
-//        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mahiInYearSelected") as? mahiInYearSelectedViewController {
-//            self.present(vc, animated: false, completion: nil)
-//            vc.delegate = self
-//            mahiDate.append(farms[indexPath.row].dateApplied)
-//        }
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "yearCell", for: indexPath) as! yearCell
         
+        //Year Formatter
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "YYYY"
+        
+        //Month Formatter
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "LLLL"
+        
+        for item in farms {
+            if ordered[indexPath.row] == dateFormatter2.string(from: item.dateApplied) {
+                //mahiMonths.append(dateFormatter.string(from: item.dateApplied))
+                mahiMonths.append(dateFormatter.string(from: item.dateApplied))
+            }
+            else {
+
+            }
+        }
+        
+        print(mahiMonths)
+        
+//        let addMonthToView2 = dateFormatter2.string(from: farms[indexPath.row].dateApplied)
+        
+//        let addMonthToView = dateFormatter.string(from: farms[indexPath.row].dateApplied)
+//        mahiMonths.append(addMonthToView)
     }
     
     
@@ -131,4 +144,18 @@ class RecordsViewController: UITableViewController, mahiRecordsDelegate {
      }
      */
     
+}
+
+extension Array where Element: Hashable {
+    func removingDuplicates() -> [Element] {
+        var addedDict = [Element: Bool]()
+        
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+    
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
+    }
 }

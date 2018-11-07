@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3E7D3FA627E32328317BC4F7 /* Pods_MAHI_SPRAY_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F92198EEB48511EAF19BD34 /* Pods_MAHI_SPRAY_APP.framework */; };
+		5537816E2192618500844E39 /* mahiInYearSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537816D2192618500844E39 /* mahiInYearSelectedViewController.swift */; };
 		5543E1F3218EDE5300B9208E /* MahiTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F2218EDE5300B9208E /* MahiTabsController.swift */; };
 		5543E1F5218EDF3400B9208E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F4218EDF3400B9208E /* SettingsViewController.swift */; };
 		5543E1F7218EE25B00B9208E /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F6218EE25B00B9208E /* RecordsViewController.swift */; };
 		5543E1F9218EE2A800B9208E /* MyMahiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */; };
+		557BD1062192626B00885247 /* monthOfMahiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BD1052192626B00885247 /* monthOfMahiCell.swift */; };
+		557BD1082192708700885247 /* yearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BD1072192708700885247 /* yearCell.swift */; };
 		55A769322190318C0051FEDD /* farmLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A769312190318C0051FEDD /* farmLotTableViewCell.swift */; };
 		55A7693421903D140051FEDD /* AddMahiPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7693321903D140051FEDD /* AddMahiPopUpController.swift */; };
-		55AB38152190C89B0078F243 /* mahiInYearSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB38142190C89B0078F243 /* mahiInYearSelectedViewController.swift */; };
 		55AB381B2190E29D0078F243 /* farmsDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB381A2190E29D0078F243 /* farmsDataStruct.swift */; };
+		55AB381D2191AC0C0078F243 /* MahiLotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB381C2191AC0C0078F243 /* MahiLotDetailViewController.swift */; };
 		55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4152188FAD800487101 /* AppDelegate.swift */; };
 		55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5E4172188FAD800487101 /* LoginViewController.swift */; };
 		55C5E41B2188FAD800487101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C5E4192188FAD800487101 /* Main.storyboard */; };
@@ -27,14 +30,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5537816D2192618500844E39 /* mahiInYearSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mahiInYearSelectedViewController.swift; path = "/Users/jaronschreiber/OneDrive/EC Projects/Xcode Projects/HACC/MAHI_SPRAY_APP/MAHI_SPRAY_APP/Records/mahiInYearSelectedViewController.swift"; sourceTree = "<absolute>"; };
 		5543E1F2218EDE5300B9208E /* MahiTabsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahiTabsController.swift; sourceTree = "<group>"; };
 		5543E1F4218EDF3400B9208E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5543E1F6218EE25B00B9208E /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMahiViewController.swift; sourceTree = "<group>"; };
+		557BD1052192626B00885247 /* monthOfMahiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthOfMahiCell.swift; sourceTree = "<group>"; };
+		557BD1072192708700885247 /* yearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yearCell.swift; sourceTree = "<group>"; };
 		55A769312190318C0051FEDD /* farmLotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmLotTableViewCell.swift; sourceTree = "<group>"; };
 		55A7693321903D140051FEDD /* AddMahiPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMahiPopUpController.swift; sourceTree = "<group>"; };
-		55AB38142190C89B0078F243 /* mahiInYearSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = mahiInYearSelectedViewController.swift; path = "/Users/jaronschreiber/OneDrive/EC Projects/Xcode Projects/HACC/MAHI_SPRAY_APP/MAHI_SPRAY_APP/mahiInYearSelectedViewController.swift"; sourceTree = "<absolute>"; };
 		55AB381A2190E29D0078F243 /* farmsDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmsDataStruct.swift; sourceTree = "<group>"; };
+		55AB381C2191AC0C0078F243 /* MahiLotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahiLotDetailViewController.swift; sourceTree = "<group>"; };
 		55C5E4122188FAD800487101 /* MAHI_SPRAY_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAHI_SPRAY_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C5E4152188FAD800487101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C5E4172188FAD800487101 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				5543E1F6218EE25B00B9208E /* RecordsViewController.swift */,
-				55AB38142190C89B0078F243 /* mahiInYearSelectedViewController.swift */,
+				557BD1072192708700885247 /* yearCell.swift */,
+				5537816D2192618500844E39 /* mahiInYearSelectedViewController.swift */,
+				557BD1052192626B00885247 /* monthOfMahiCell.swift */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 				5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */,
 				55A769312190318C0051FEDD /* farmLotTableViewCell.swift */,
 				55A7693321903D140051FEDD /* AddMahiPopUpController.swift */,
+				55AB381C2191AC0C0078F243 /* MahiLotDetailViewController.swift */,
 			);
 			path = "My Mahi";
 			sourceTree = "<group>";
@@ -280,6 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557BD1062192626B00885247 /* monthOfMahiCell.swift in Sources */,
+				5537816E2192618500844E39 /* mahiInYearSelectedViewController.swift in Sources */,
+				55AB381D2191AC0C0078F243 /* MahiLotDetailViewController.swift in Sources */,
 				55C5E4182188FAD800487101 /* LoginViewController.swift in Sources */,
 				55C5E4162188FAD800487101 /* AppDelegate.swift in Sources */,
 				55C5E42B21898B5D00487101 /* SignUpViewController.swift in Sources */,
@@ -290,8 +302,8 @@
 				55A7693421903D140051FEDD /* AddMahiPopUpController.swift in Sources */,
 				55AB381B2190E29D0078F243 /* farmsDataStruct.swift in Sources */,
 				5543E1F5218EDF3400B9208E /* SettingsViewController.swift in Sources */,
+				557BD1082192708700885247 /* yearCell.swift in Sources */,
 				5543E1F7218EE25B00B9208E /* RecordsViewController.swift in Sources */,
-				55AB38152190C89B0078F243 /* mahiInYearSelectedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,10 +457,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "HACC.MAHI-SPRAY-APP123";
+				PRODUCT_BUNDLE_IDENTIFIER = "HACC.MAHI-SPRAY-APP1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -464,10 +476,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "HACC.MAHI-SPRAY-APP123";
+				PRODUCT_BUNDLE_IDENTIFIER = "HACC.MAHI-SPRAY-APP1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

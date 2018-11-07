@@ -9,11 +9,17 @@
 import UIKit
 
 protocol addMahiDelegate: class {
-    func removeBlur()
     func hideToolbar(isHidden: Bool)
 }
 
-class MyMahiViewController: UITableViewController, addMahiDelegate {
+class MyMahiViewController: UITableViewController, addMahiDelegate, mahiDetailDelegate {
+    
+    var mahiBGImage: UIImage = UIImage(named: "taro_background")!
+    
+    var mahiLotNameVar: String = ""
+    
+    var mahiLotAddVar: String = ""
+    
     
     //UIBlurEffect
     let visualEffectView = UIVisualEffectView()
@@ -23,45 +29,43 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.contentInset.top = 20.0
+        
         navBarheight = self.navigationController?.navigationBar.frame.height ?? 0
         
         //Blur Behind Add Mahi Segue
         visualEffectView.effect = nil
         visualEffectView.frame = self.view.bounds
-        
-        farms.append(Mahi(name: "Farm One", address: "111 Kalanui Rd", dateApplied: Date(timeIntervalSince1970: 3000), image: UIImage(named: "taro_background")!, pesticides: [pesticide(pesticideName: "Cyanide")]))
-        tableView.reloadData()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    func removeBlur() {
-        self.visualEffectView.effect = nil
-        self.visualEffectView.removeFromSuperview()
-        self.tableView.reloadData()
     }
     
     //adding gradient behind add mahi popup
     let blueView:UIView = UIView(frame: UIScreen.main.bounds)
     
     func hideToolbar(isHidden: Bool) {
-        
         let hueCard = CAGradientLayer()
         hueCard.frame = blueView.bounds
         hueCard.startPoint = CGPoint(x: 0, y: 0)
         hueCard.endPoint = CGPoint(x: 1, y: 1)
         hueCard.colors = [UIColor.init(red: 0.839, green: 0.47, blue: 0.247, alpha: 1.0).cgColor, UIColor.init(red: 0.824, green: 0.255, blue: 0.282, alpha: 1.0).cgColor]
-
         blueView.layer.addSublayer(hueCard)
+        
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.numberOfLines = 1
+        label.text = "Nothing to refresh here!"
+        label.sizeToFit()
+        label.frame = CGRect(x: 0, y: 75, width: label.frame.width, height: label.frame.height)
+        label.center.x = self.view.center.x
+        label.layer.opacity = 0.0
+        blueView.addSubview(label)
+        
         self.blueView.layer.opacity = 0.0
         UIApplication.shared.keyWindow?.addSubview(self.blueView)
         
-        
         if isHidden == true {
+            self.tableView.reloadData()
             self.navigationItem.rightBarButtonItem = self.addMahiButtonOutlet
             
             UIView.animate(withDuration: 0.3) {
@@ -71,39 +75,22 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
         }
             
         else if isHidden == false {
-            
             UIView.animate(withDuration: 0.3) {
                 self.blueView.layer.opacity = 1.0
             }
             self.navigationItem.rightBarButtonItem = nil
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                label.layer.opacity = 1.0
+            }
         }
     }
     
     @IBAction func addMahiButtonPressed(_ sender: UIBarButtonItem) {
-        
         hideToolbar(isHidden: false)
-        
-        //        if let applicationDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate? {
-        //            if let window:UIWindow = applicationDelegate.window {
-        //                let blueView:UIView = UIView(frame: UIScreen.main.bounds)
-        //                let hueCard = CAGradientLayer()
-        //                hueCard.frame = blueView.bounds
-        //                hueCard.startPoint = CGPoint(x: 0, y: 0)
-        //                hueCard.endPoint = CGPoint(x: 1, y: 1)
-        //                hueCard.colors = [UIColor.init(red: 0.839, green: 0.47, blue: 0.247, alpha: 1.0).cgColor, UIColor.init(red: 0.824, green: 0.255, blue: 0.282, alpha: 1.0).cgColor]
-        //
-        //                blueView.layer.addSublayer(hueCard)
-        //                window.addSubview(blueView)
-        //            }
-        //        }
         
         if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addMahiController") as? AddMahiPopUpController {
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)
-            //            UIView.animate(withDuration: 1.0) {
-            //                self.visualEffectView.effect = UIBlurEffect(style: UIBlurEffect.Style.prominent)
-            //                self.view.addSubview(self.visualEffectView)
-            //            }
         }
     }
     // MARK: - Table view data source
@@ -121,7 +108,7 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "farmCell", for: indexPath) as? farmLotTableViewCell
         
-        //        cell.textLabel?.text = farms[indexPath.row].name
+        cell?.selectionStyle = .none
         
         if let farmCellExists = cell {
             farmCellExists.farmLotNameLabel?.text = farms[indexPath.row].name
@@ -132,25 +119,39 @@ class MyMahiViewController: UITableViewController, addMahiDelegate {
         return cell!
     }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        mahiLotNameVar = farms[indexPath.row].name
+        mahiLotAddVar = farms[indexPath.row].address
+        mahiBGImage = farms[indexPath.row].image
+        
+        hideToolbar(isHidden: false)
+        
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mahiLot") as? MahiLotDetailViewController {
+            vc.delegate = self
+            vc.delegate2 = self
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    // Override to support conditional editing of the table view.
+    //    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    //        // Return false if you do not want the specified item to be editable.
+    //        return true
+    //    }
+    
+    
+    
+    // Override to support editing the table view.
+    //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete {
+    //            farms.remove(at: indexPath.row)
+    //            tableView.deleteRows(at: [indexPath], with: .fade)
+    //        } else if editingStyle == .insert {
+    //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    //        }
+    //    }
+    
     
     /*
      // Override to support rearranging the table view.
