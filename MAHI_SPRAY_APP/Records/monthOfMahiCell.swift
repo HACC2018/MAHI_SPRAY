@@ -11,10 +11,11 @@ import UIKit
 class monthOfMahiCell: UITableViewCell {
 
     @IBOutlet var monthLabel: UILabel!
+    @IBOutlet var cardView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cardView.layer.cornerRadius = 22.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

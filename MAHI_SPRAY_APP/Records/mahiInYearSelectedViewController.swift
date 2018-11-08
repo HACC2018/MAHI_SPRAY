@@ -46,6 +46,8 @@ class mahiInYearSelectedViewController: UITableViewController {
         if let yearCellExists = cell {
             yearCellExists.monthLabel.text = mahiMonths[indexPath.row]
         }
+        
+        cell?.selectionStyle = .none
         return cell!
     }
     

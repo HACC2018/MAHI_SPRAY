@@ -12,8 +12,10 @@ protocol addMahiDelegate: class {
     func hideToolbar(isHidden: Bool)
 }
 
-class MyMahiViewController: UITableViewController, addMahiDelegate, mahiDetailDelegate {
+class MyMahiViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, addMahiDelegate, mahiDetailDelegate {
     
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var viewForHeader: UIView!
     var mahiBGImage: UIImage = UIImage(named: "taro_background")!
     
     var mahiLotNameVar: String = ""
@@ -24,10 +26,10 @@ class MyMahiViewController: UITableViewController, addMahiDelegate, mahiDetailDe
     //UIBlurEffect
     let visualEffectView = UIVisualEffectView()
     
-    @IBOutlet var addMahiButtonOutlet: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         self.tableView.contentInset.top = 20.0
         
@@ -66,8 +68,6 @@ class MyMahiViewController: UITableViewController, addMahiDelegate, mahiDetailDe
         
         if isHidden == true {
             self.tableView.reloadData()
-            self.navigationItem.rightBarButtonItem = self.addMahiButtonOutlet
-            
             UIView.animate(withDuration: 0.3) {
                 self.blueView.layer.opacity = 0.0
             }
@@ -78,59 +78,98 @@ class MyMahiViewController: UITableViewController, addMahiDelegate, mahiDetailDe
             UIView.animate(withDuration: 0.3) {
                 self.blueView.layer.opacity = 1.0
             }
-            self.navigationItem.rightBarButtonItem = nil
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 label.layer.opacity = 1.0
             }
         }
     }
-    
-    @IBAction func addMahiButtonPressed(_ sender: UIBarButtonItem) {
-        hideToolbar(isHidden: false)
-        
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addMahiController") as? AddMahiPopUpController {
-            vc.delegate = self
-            self.present(vc, animated: true, completion: nil)
-        }
-    }
+
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell")
+//        headerView.addSubview(headerCell!)
+//        return headerView
+//    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+        
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 55
+//    }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return farms.count
+        return farms.count + 2
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "farmCell", for: indexPath) as? farmLotTableViewCell
-        
-        cell?.selectionStyle = .none
-        
-        if let farmCellExists = cell {
-            farmCellExists.farmLotNameLabel?.text = farms[indexPath.row].name
-            farmCellExists.farmLotAddressLabel.text = farms[indexPath.row].address
-            farmCellExists.backgroundImage.image = farms[indexPath.row].image
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row > 0 && indexPath.row < tableView.numberOfRows(inSection: 0) - 1 {
+            return 200
+        }
+            
+        if indexPath.row == 0 {
+            return 55
         }
         
-        return cell!
+        else {
+            return 100
+        }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == farms.count + 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addCell", for: indexPath)
+            cell.selectionStyle = .none
+            return cell
+        }
+            
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell", for: indexPath)
+            cell.selectionStyle = .none
+            return cell
+        }
         
-        mahiLotNameVar = farms[indexPath.row].name
-        mahiLotAddVar = farms[indexPath.row].address
-        mahiBGImage = farms[indexPath.row].image
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "farmCell", for: indexPath) as? farmLotTableViewCell
+            
+            cell?.selectionStyle = .none
+            
+            if let farmCellExists = cell {
+                farmCellExists.farmLotNameLabel?.text = farms[indexPath.row-1].name
+                farmCellExists.farmLotAddressLabel.text = farms[indexPath.row-1].address
+                farmCellExists.backgroundImage.image = farms[indexPath.row-1].image
+            }
+            return cell!
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
+            hideToolbar(isHidden: false)
+            
+            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addMahiController") as? AddMahiPopUpController {
+                vc.delegate = self
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
         
-        hideToolbar(isHidden: false)
+        else {
+            mahiLotNameVar = farms[indexPath.row-1].name
+            mahiLotAddVar = farms[indexPath.row-1].address
+            mahiBGImage = farms[indexPath.row-1].image
+            
+            hideToolbar(isHidden: false)
         
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mahiLot") as? MahiLotDetailViewController {
-            vc.delegate = self
-            vc.delegate2 = self
-            self.present(vc, animated: true, completion: nil)
+            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mahiLot") as?    MahiLotDetailViewController {
+                vc.delegate = self
+                vc.delegate2 = self
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
     

@@ -11,10 +11,11 @@ import UIKit
 class yearCell: UITableViewCell {
 
     @IBOutlet var yearLabel: UILabel!
+    @IBOutlet var yearCard: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        yearCard.layer.cornerRadius = 22.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

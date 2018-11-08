@@ -19,7 +19,7 @@ class farmLotTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        outsideContentView.layer.shadowRadius = 10
+        outsideContentView.layer.shadowRadius = 5
         outsideContentView.layer.shadowOpacity = 0.2
         outsideContentView.layer.shadowOffset = CGSize(width: 1, height: 5)
         farmCardView.layer.cornerRadius = 20.0

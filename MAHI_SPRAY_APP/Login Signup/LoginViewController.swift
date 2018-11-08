@@ -47,6 +47,9 @@ class LoginViewController: UIViewController, MyDelegate, UITextFieldDelegate {
         
         usernameLogInputField.delegate = self
         passwordLogInputField.delegate = self
+        
+        usernameLogInputField.text = "jkschrei@gmail.com"
+        passwordLogInputField.text = "123456"
     }
     
     //Textfield Outlets

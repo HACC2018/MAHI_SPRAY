@@ -64,6 +64,7 @@ class RecordsViewController: UITableViewController, mahiRecordsDelegate {
         
         ordered.sort()
         cell?.yearLabel.text = "\(ordered[indexPath.row])"
+        cell?.selectionStyle = .none
 
         return cell!
     }

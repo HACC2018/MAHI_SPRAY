@@ -15,6 +15,7 @@
 		5543E1F9218EE2A800B9208E /* MyMahiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */; };
 		557BD1062192626B00885247 /* monthOfMahiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BD1052192626B00885247 /* monthOfMahiCell.swift */; };
 		557BD1082192708700885247 /* yearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557BD1072192708700885247 /* yearCell.swift */; };
+		5587BD932193DEE80030EC26 /* addNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587BD922193DEE80030EC26 /* addNewCell.swift */; };
 		55A769322190318C0051FEDD /* farmLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A769312190318C0051FEDD /* farmLotTableViewCell.swift */; };
 		55A7693421903D140051FEDD /* AddMahiPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7693321903D140051FEDD /* AddMahiPopUpController.swift */; };
 		55AB381B2190E29D0078F243 /* farmsDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB381A2190E29D0078F243 /* farmsDataStruct.swift */; };
@@ -37,6 +38,7 @@
 		5543E1F8218EE2A800B9208E /* MyMahiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMahiViewController.swift; sourceTree = "<group>"; };
 		557BD1052192626B00885247 /* monthOfMahiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthOfMahiCell.swift; sourceTree = "<group>"; };
 		557BD1072192708700885247 /* yearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yearCell.swift; sourceTree = "<group>"; };
+		5587BD922193DEE80030EC26 /* addNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCell.swift; sourceTree = "<group>"; };
 		55A769312190318C0051FEDD /* farmLotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmLotTableViewCell.swift; sourceTree = "<group>"; };
 		55A7693321903D140051FEDD /* AddMahiPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMahiPopUpController.swift; sourceTree = "<group>"; };
 		55AB381A2190E29D0078F243 /* farmsDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmsDataStruct.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				55A769312190318C0051FEDD /* farmLotTableViewCell.swift */,
 				55A7693321903D140051FEDD /* AddMahiPopUpController.swift */,
 				55AB381C2191AC0C0078F243 /* MahiLotDetailViewController.swift */,
+				5587BD922193DEE80030EC26 /* addNewCell.swift */,
 			);
 			path = "My Mahi";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				55AB381B2190E29D0078F243 /* farmsDataStruct.swift in Sources */,
 				5543E1F5218EDF3400B9208E /* SettingsViewController.swift in Sources */,
 				557BD1082192708700885247 /* yearCell.swift in Sources */,
+				5587BD932193DEE80030EC26 /* addNewCell.swift in Sources */,
 				5543E1F7218EE25B00B9208E /* RecordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
