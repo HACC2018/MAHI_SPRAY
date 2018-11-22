@@ -454,8 +454,9 @@
 			baseConfigurationReference = B07144DCD5FF728F176024A6 /* Pods-MAHI_SPRAY_APP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25Y55RHUTB;
 				INFOPLIST_FILE = MAHI_SPRAY_APP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,8 +475,9 @@
 			baseConfigurationReference = AF66541E8E61A9648DE74716 /* Pods-MAHI_SPRAY_APP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25Y55RHUTB;
 				INFOPLIST_FILE = MAHI_SPRAY_APP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
