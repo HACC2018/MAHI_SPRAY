@@ -1,0 +1,76 @@
+Database structure in hacc-mahi-spray (https://console.firebase.google.com/project/hacc-mahi-spray/database/hacc-mahi-spray/data)
+
+I will write this up in terms of JSON so that it is universal across the Mobile App and Web App
+
+Users2 :	//This is person/account owner//
+	[ uniqueId :
+		[name : NAME,
+		 adddress : ADDRESS,
+		 email : EMAIL 
+		] ,
+	  uniqueID : ...
+	]
+Org2 :		//This is the Farm or business //
+	[ uniqueID :
+		[userid: uniqueId of Users2 item,
+		 name: NAME of farm or Business,
+		 address: ADDRESS of business, might be different than on the account,
+		 acreage: ACREAGE
+		],
+	  uniqueID : ...
+	]
+
+Lots :		//This is the feild, building, or farm patch //
+	[ uniqueID :
+		[ userid: uniqueId of Org2 item,
+		  name: name for the field or building,
+		  acreage: ACREAGE,
+		  shape: 	//points that outline the shape and locations of field//
+			[ 0 [0:x-coord, 1: y-coord] ,
+			  1 [0:x-coord, 1: y-coord] ,
+			  2 [0:x-coord, 1: y-coord] ,
+			  3 [0:x-coord, 1: y-coord]  //this one is square feild//
+			]
+		],
+	  uniqueID : ...
+	]
+
+Products :	//This is the crop in a specific lot //
+	[ uniqueID :
+		[ userid: uniqueId of Lots item,
+		  croptype: PLANT NAME (or animal, I guess),
+		  PlantingDate: start date
+		  HarvestDate: end date // one field can be used for diff crops over time//
+		],
+	  uniqueID : ...
+	]
+
+Pesticides:	//This is a pesticide used by a specific User //
+	[ uniqueID :
+		[userid: uniqueId of Users2 item,
+		 pesticide: pesticide name,
+		 activePercent: value,
+		 DilutionRate: value,
+		 EPA RegNumber: government id #,
+		 Formulation: description,
+		 Croptype: recommended use,
+		 Pest: recommended use
+		],
+	  uniqueID : ...
+	]
+
+PesticideEvent : //This is a pesticide used on a Product on a specific date //
+	[ uniqueID : 
+		[ cropId: uniqueId of products item,
+		  pesticideID: uniqueId of Pesticides item
+		  date: date of event,
+		  method: description,
+		  pest: description
+		],
+	  uniqueID : ...
+	]
+
+
+Other objects (tables in DB terms)  can be added to cross-link Users to cropid or Orgs to pesticideEvents, etc to speed up queries. This keeps details in one place and links in another. 
+
+Other data points may be needed by the applications, such as color that User decided to make a certain feild on his phone app. This data isn't needed to fill in the DOA forms, but might be needed to keep that App specific to the user between sessions or betwix phones (manager: "go to farm4 and spray the field marked in RED with pesticide #25. use the Phone, so I know when it has been done") 
